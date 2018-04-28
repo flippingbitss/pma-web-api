@@ -33,6 +33,7 @@ export class UserController {
     }
 
     @Post()
+    @OnUndefined(Error)
     public create(@Body() user: User): Promise<User> {
         return this.userService.create(user);
     }

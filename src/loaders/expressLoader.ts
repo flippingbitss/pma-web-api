@@ -19,7 +19,7 @@ export const expressLoader: MicroframeworkLoader = (
             cors: true,
             classTransformer: true,
             routePrefix: env.app.routePrefix,
-            defaultErrorHandler: false,
+            defaultErrorHandler: true,
             /**
              * We can add options about how routing-controllers should configure itself.
              * Here we specify what controllers should be registered in our express server.
@@ -27,7 +27,7 @@ export const expressLoader: MicroframeworkLoader = (
             controllers: env.app.dirs.controllers,
             middlewares: env.app.dirs.middlewares,
             interceptors: env.app.dirs.interceptors,
-
+            validation: true,
             /**
              * Authorization features
              */
